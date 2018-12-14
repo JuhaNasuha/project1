@@ -1,0 +1,9 @@
+
+include 'User.php';
+?>
+<?php
+	$user = new User();
+	if ($SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
+		$usrRegi = $user->userRegistration($_POST);
+
+	}
